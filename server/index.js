@@ -3,12 +3,15 @@ const app = express();
 const http = require("http");
 const cors = require("cors");
 const { Server } = require("socket.io");
+
 app.use(cors());
+app.use(express.static(__dirname + '/public')); // server static site in /public
+
 const server = http.createServer(app);
 
 const io = new Server(server, {
   cors: {
-    origin: "http://localhost:3000",
+    origin: "*",
     methods: ["GET", "POST"],
   },
 });
@@ -30,6 +33,6 @@ io.on("connection", (socket) => {
 
 })
 
-server.listen(3001, () => {
+server.listen(80, '0.0.0.0', () => {
   console.log("Server running");
 });
