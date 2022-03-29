@@ -1,5 +1,5 @@
 Demo:
-https://gyu-chatapp.ncp.nathanferns.xyz/
+currently not available :(
 
 A chat app capable of delivering messages in real time as well as constructed in scalable manner for the purpose of
 further development such as users database system or messages retrieval system for better user experience.
